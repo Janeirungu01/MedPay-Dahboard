@@ -12,7 +12,8 @@ function App() {
         <Route index element={<Dashboard />} /> 
         <Route path= '/product' element={<Products />} /> 
         </Route>
-      </Routes>
+        <Route path= '/login' element={<div>This is a login</div>} /> 
+       </Routes>
     </Router>    
     </>
 
