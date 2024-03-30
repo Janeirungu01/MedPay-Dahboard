@@ -1,5 +1,4 @@
 
-
 const paymentData = [
     {
         transactionId: 'PH56743',
@@ -51,50 +50,56 @@ const paymentData = [
     },
 ];
 
-const Transactions = () => {
+const RecentOrders = () => {
     const textColor = paymentData.map(each => {
-        if (each.status === "Completed") {
+        if (each.amount === "N20,000") {
             return 'green';
-        } else if (each.status === 'Pending') {
+        } else if (each.amount === '-N20,000') {
             return 'orange';
         } else {
             return 'blue';
         }
     });
 
-    return (
-        <div className="shadow mx-1 px-3 bg-light rounded-3 ">
-            <div className=' d-flex align-items-center justify-content-between p-3 mt-3 ' >
-                <h4 className="mb-0">Recent Transactions</h4>
-                <button className="btn ">Filter</button>
-            </div>
 
-            <div className=' '>
-                <table className="table ">
+  return (
+        <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
+			<strong className="text-gray-700 font-bold">Recent Transactions</strong>
+			<button className="btn ">Filter</button>
+            <div className="mt-3">
+                <table className="w-full text-gray-700">
                     <thead>
-                        <tr>
+                        <tr>                            
                             <th>Date</th>
                             <th>Transaction ID</th>
                             <th>Description</th>
                             <th>Category</th>
-                            <th>Amount</th>                           
+                            <th>Amount</th>    
                         </tr>
                     </thead>
                     <tbody>
-                        {paymentData.map((pay, index) => (
+					{paymentData.map((pay, index) => (
                             <tr key={index}>
                                 <td>{pay.date}</td>
                                 <td>{pay.transactionId}</td>
+                                <td>{pay.description}</td>
                                 <td>{pay.category}</td>
-                                <td>{pay.amount}</td>
-                                <td style={{ color: textColor[index] }}>{pay.status}</td>
+                                <td style={{ color: textColor[index] }}>{pay.amount}</td>
                             </tr>
                         ))}
-                    </tbody>
+            		</tbody>
+
+                       
                 </table>
             </div>
-        </div>
-    );
-};
+            
+    </div>
+    
+  )
+}
 
-export default Transactions; 
+export default RecentOrders
+
+
+
+
