@@ -48,6 +48,22 @@ const paymentData = [
         category: 'Laboratory',
         amount : 'N20,000'  
     },
+    {
+        transactionId: 'PH56743',
+        description: 'New Items',
+        date: 'Today, 12:00PM',
+        status: 'Pending',
+        category: 'Laboratory',
+        amount : '-N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'Malaria tests',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Laboratory',
+        amount : 'N20,000'  
+    },
 ];
 
 const RecentOrders = () => {

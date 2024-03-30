@@ -55,7 +55,7 @@ function Charts() {
 
 			<div className="mt-3 w-full flex-1 text-xs">
 			<strong className="text-gray-700 font-medium">March 2024</strong>
-    <ResponsiveContainer width="100%" height="80%">
+    <ResponsiveContainer width="100%" height="100%">
         <BarChart width={500}
 						height={300}
 						data={data}
