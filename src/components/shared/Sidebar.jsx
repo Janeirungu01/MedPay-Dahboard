@@ -1,6 +1,63 @@
 import { FcBullish } from 'react-icons/fc'
 import { AiOutlineDashboard } from 'react-icons/ai';
+import { BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
+  BsListCheck, BsMenuButtonWideFill, BsFillGearFill }
+ from 'react-icons/bs'
 
+function Sidebar() {
+  return (
+    <>
+    <aside >
+         <div className='sidebar-title'>            
+            
+        </div>
+
+        <ul className="sidebar-list">
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsGrid1X2Fill className='icons'/> Dashboarddashh
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsFillArchiveFill className='icons'/> Transaction
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsFillGrid3X3GapFill className='icons'/> Analytics
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsPeopleFill className='icons'/> Profile
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsListCheck className='icons'/> Staff
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsFillGearFill className='icons'/> Setting
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsFillGearFill className='icon'/> Logout
+                </a>
+            </li>
+        </ul>
+    </aside>
+    </>
+  )
+}
+
+export default Sidebar
+
+
+/*
 function Sidebar() {
   return (
     <>
@@ -31,4 +88,5 @@ function Sidebar() {
 }
 
 export default Sidebar
+*/
 

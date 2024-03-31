@@ -1,4 +1,4 @@
-
+import { AiOutlineFilter } from "react-icons/ai";
 const paymentData = [
     {
         transactionId: 'PH56743',
@@ -79,9 +79,15 @@ const RecentOrders = () => {
 
 
   return (
+    <>
         <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
-			<strong className="text-gray-700 font-bold">Recent Transactions</strong>
-			<button className="btn ">Filter</button>
+			<div className="flex justify-between py-3 px-2.5 text-sm text-left border-y bg-neutral-100">
+                <div className=" flex justify-start space-x-4 text-sm">
+                <strong className="text-gray-700 font-bold">Recent Transactions</strong>
+                <p>Today</p>
+                <p>March 2024</p>
+                </div>
+		 <button className="btn inline">Filter</button> </div> 
             <div className="mt-3">
                 <table className="w-full text-gray-700">
                     <thead>
@@ -110,6 +116,7 @@ const RecentOrders = () => {
             </div>
             
     </div>
+    </>
     
   )
 }
