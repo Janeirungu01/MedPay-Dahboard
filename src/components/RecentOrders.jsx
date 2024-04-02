@@ -1,4 +1,6 @@
 import { AiOutlineFilter } from "react-icons/ai";
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 const paymentData = [
     {
         transactionId: 'PH56743',
@@ -82,12 +84,12 @@ const RecentOrders = () => {
     <>
         <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
 			<div className="flex justify-between py-3 px-2.5 text-sm text-left border-y bg-neutral-100">
-                <div className=" flex justify-start space-x-4 text-sm">
-                <strong className="text-gray-700 font-bold">Recent Transactions</strong>
-                <p>Today</p>
-                <p>March 2024</p>
+                <div className=" flex justify-start space-x-4  text-center" >
+                <strong className="text-gray-700 font-bold mt-1">Recent Transactions</strong>
+                <button className='border rounded border-gray-200 p-0 text-sm flex flex-row items-center bg-neutral-50'>Today <RiArrowDropDownLine /></button>
+                <button className='border rounded border-gray-200 p-0 text-sm flex flex-row items-center bg-neutral-50'>March 2024<RiArrowDropDownLine /></button>              
                 </div>
-		 <button className="btn inline">Filter</button> </div> 
+		 <button className='border rounded border-gray-200 p-0 text-sm flex flex-row items-center bg-neutral-50'><AiOutlineFilter /> Filter</button> </div> 
             <div className="mt-3">
                 <table className="w-full text-gray-700">
                     <thead>

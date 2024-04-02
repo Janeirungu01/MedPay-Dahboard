@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	overflow-y: hidden;
+	background-color: #fff;
+}
+
 /* Header  */
 .header {
 	grid-area: header;
@@ -33,6 +38,45 @@
   }
   /* End Header  */
 
+  /* sidebar */
+
+  .menu {
+	color:#374151;
+	width: 10%;
+	min-height: 100vh;
+  }
+
+  .sidebar-list {
+	display: flex;
+	flex-direction: column;
+	margin-left: 35px;
+
+  }
+
+	.sidebar-list-item {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+
+		gap: 10px;
+		width: 100%;
+		height: 50px;
+		font-weight: bold;
+	}
+
+	.sidebar-list-item  a {
+		color:#374151;		
+		text-decoration: none;
+	}
+	
+	.sidebar-list-item a:active {
+		color: #0ea5e9;
+	}
+
+
+
+  /* sidebar */
 
 @layer base {
 	html {
