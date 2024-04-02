@@ -2,7 +2,7 @@
     
     const Parentdiv = {
         height: height,
-        width: '50%',
+        width: '30%',
         backgroundColor: 'whitesmoke',
         borderRadius: 40,
         margin: 20
@@ -10,6 +10,7 @@
      
       const Childdiv = {
         height: '100%',
+
         width: `${progress}%`,
         backgroundColor: bgcolor,
        borderRadius:40,

@@ -1,3 +1,33 @@
+
+import { BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
+    BsListCheck, BsMenuButtonWideFill, BsFillGearFill } from 'react-icons/bs';
+
+function Sidebar() {
+  return (
+    <>
+      <aside className='menu'>
+        <h2 className="className='items-center pt-30 text-red-500">
+           MedPay Tracka
+        </h2>
+        <div className="text-center justify-center">
+            <ul className='flex-row flex-1'>
+                <li className='py-8 flex flex-1 flex-col gap-0.5 text-black'><BsGrid1X2Fill /><a href="">Dashboard</a></li>
+                <li className='sidebar-list-item'><BsFillArchiveFill /><a href="">Transaction</a></li>
+                <li className='sidebar-list-item'><BsFillGrid3X3GapFill /><a href="">Analytics</a></li>
+                <li className='sidebar-list-item'><BsPeopleFill /><a href="">Profile</a></li>
+                <li className='sidebar-list-item'>< BsListCheck/><a href="">Staff</a></li>
+                <li className='sidebar-list-item'>< BsMenuButtonWideFill /><a href="">Settings</a></li>
+                <li className='sidebar-list-item'><BsFillGearFill /><a href="">Logout</a></li>
+            </ul>
+        </div>
+      </aside>
+    </>
+  )
+}
+
+export default Sidebar
+
+/*
 import { FcBullish } from 'react-icons/fc'
 import { AiOutlineDashboard } from 'react-icons/ai';
 import { BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
@@ -15,7 +45,7 @@ function Sidebar() {
         <ul className="sidebar-list">
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsGrid1X2Fill className='icons'/> Dashboarddashh
+                    <BsGrid1X2Fill className='icons'/> Dashboard
                 </a>
             </li>
             <li className='sidebar-list-item'>
@@ -57,7 +87,7 @@ function Sidebar() {
 export default Sidebar
 
 
-/*
+
 function Sidebar() {
   return (
     <>

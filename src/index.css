@@ -7,19 +7,20 @@
 /* Header  */
 .header {
 	grid-area: header;
-	height: 60px;
+	width: 100%;
+	height: 80px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 30px 0 30px;
-	box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+	padding: 0 30px 0 50px;
   }
   
   .icon {
 	vertical-align: middle;
 	line-height: 1px;
-	font-size: 20px;
+	font-size: 30px;
+	color: #fff;
 	padding: 2px;
   }
   
@@ -42,7 +43,7 @@
 	}
 	th,
 	td {
-		@apply py-3 px-2.5 text-sm text-left border-y border-gray-200;
+		@apply py-3 px-2.5 text-sm text-left border-y ;
 	}
 	thead {
 		@apply bg-neutral-100;
@@ -55,34 +56,11 @@
 	}
 }
 
+@layer base {
+	ul {
+		list-style: revert;
+	}
+}
 
-#sidebar {
-	grid-area: sidebar;
-	height: 100%;
-	background-color: #263043;
-	overflow-y: auto;
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-  }
-    
- 
- .sidebar-list  {
-	padding: 0;
-	list-style-type: none;
-  }
-  
-  .sidebar-list-item {
-		padding: 20px 20px 20px 20px;
-	font-size: 18px;
-  }
-  
-  .sidebar-list-item:hover {
-	background-color: rgba(255, 255, 255, 0.2);
-	cursor: pointer;
-  }
-  
-  .sidebar-list-item > a {
-	text-decoration: none;
-	color: black;
-  }
-  
+
+

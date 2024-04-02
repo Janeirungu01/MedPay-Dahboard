@@ -28,7 +28,7 @@ const data = [
 function Charts() {
   return (
     <>
-    <div className="h-[22rem] bg-white p-4 rounded-sm border border-gray-200 flex flex-column flex-1">
+    <div className="h-[25rem] bg-white p-4 rounded-sm border border-gray-200 flex flex-column flex-1">
 	<div className="mt-3 w-full flex-1 text-xs">
 	<p className="text-gray-700 font-medium">Income this week</p>
 						<ResponsiveContainer width="80%" height="80%">
@@ -73,16 +73,16 @@ function Charts() {
 						<Bar dataKey="Income" fill="#ea580c" />
 						<Bar dataKey="Expense" fill="#fdba74" />
             </BarChart>
-                        </ResponsiveContainer>
+    </ResponsiveContainer>
 					</div>
 
-					<div className="mt-3 w-full flex-1 text-xs">
+					<div className="mt-3 flex-1 text-xs h-screen w-screen">
 	<p className="text-gray-700 font-medium">Top Categories</p>
 			
             <h3 className="heading">Showing data for top income</h3>
 			<br />
 			<p className="text-center justify-center">Pharmacy  52%</p>
-            <Progressbar
+            <Progressbar 
                 bgcolor="#065f46"
                 progress="52"
                 height={15}
@@ -96,7 +96,7 @@ function Charts() {
 			<p className="text-center justify-center">Laboratory   82%</p>
             <Progressbar
                 bgcolor="#065f46"
-                progress="82"
+                progress="82" 
                 height={15}
             />
 			<p className="text-center justify-center">Emergency Fund   29%</p>
