@@ -1,7 +1,103 @@
 import { AiOutlineFilter } from "react-icons/ai";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
-const paymentData = [
+const transactionData = [
+    {
+        transactionId: 'PH56743',
+        description: 'Sales',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Pharmacy',
+        amount : 'N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'New Stocks',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Ob-Gyn',
+        amount : 'N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'Sales',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Pharmacy',
+        amount : 'N20,000'      
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'Sales',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Pharmacy',
+        amount : 'N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'New Stocks',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Ob-Gyn',
+        amount : 'N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'Sales',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Pharmacy',
+        amount : 'N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'New Stocks',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Ob-Gyn',
+        amount : 'N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'New Items',
+        date: 'Today, 12:00PM',
+        status: 'Pending',
+        category: 'Pharmacy',
+        amount : '-N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'New Items',
+        date: 'Today, 12:00PM',
+        status: 'Pending',
+        category: 'Laboratory',
+        amount : '-N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'Malaria tests',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Laboratory',
+        amount : 'N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'New Items',
+        date: 'Today, 12:00PM',
+        status: 'Pending',
+        category: 'Laboratory',
+        amount : '-N20,000'  
+    },
+    {
+        transactionId: 'PH56743',
+        description: 'Malaria tests',
+        date: 'Today, 12:00PM',
+        status: 'Completed',
+        category: 'Laboratory',
+        amount : 'N20,000'  
+    },
     {
         transactionId: 'PH56743',
         description: 'Sales',
@@ -34,42 +130,10 @@ const paymentData = [
         category: 'Pharmacy',
         amount : '-N20,000'  
     },
-    {
-        transactionId: 'PH56743',
-        description: 'New Items',
-        date: 'Today, 12:00PM',
-        status: 'Pending',
-        category: 'Laboratory',
-        amount : '-N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'Malaria tests',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Laboratory',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'New Items',
-        date: 'Today, 12:00PM',
-        status: 'Pending',
-        category: 'Laboratory',
-        amount : '-N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'Malaria tests',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Laboratory',
-        amount : 'N20,000'  
-    },
 ];
 
-const RecentOrders = () => {
-    const textColor = paymentData.map(each => {
+const Transactions = () => {
+    const textColor = transactionData.map(each => {
         if (each.amount === "N20,000") {
             return 'green';
         } else if (each.amount === '-N20,000') {
@@ -89,7 +153,8 @@ const RecentOrders = () => {
                 <button className='border rounded border-gray-200 p-0 text-sm flex flex-row items-center bg-neutral-50'>Today <RiArrowDropDownLine /></button>
                 <button className='border rounded border-gray-200 p-0 text-sm flex flex-row items-center bg-neutral-50'>March 2024<RiArrowDropDownLine /></button>              
                 </div>
-		 <button className='border rounded border-gray-200 px-2 text-sm flex flex-row items-center bg-neutral-50'><AiOutlineFilter /> Filter</button> </div> 
+		    <button className='border rounded border-gray-200 px-2 text-sm flex flex-row items-center bg-neutral-50'><AiOutlineFilter /> Filter</button> 
+         </div> 
             <div className="mt-3">
                 <table className="w-full text-gray-700">
                     <thead>
@@ -102,7 +167,7 @@ const RecentOrders = () => {
                         </tr>
                     </thead>
                     <tbody>
-					{paymentData.map((pay, index) => (
+					{transactionData.map((pay, index) => (
                             <tr key={index}>
                                 <td>{pay.date}</td>
                                 <td>{pay.transactionId}</td>
@@ -111,9 +176,7 @@ const RecentOrders = () => {
                                 <td style={{ color: textColor[index] }}>{pay.amount}</td>
                             </tr>
                         ))}
-            		</tbody>
-
-                       
+            		</tbody>                       
                 </table>
             </div>
             
@@ -122,9 +185,4 @@ const RecentOrders = () => {
     
   )
 }
-
-export default RecentOrders
-
-
-
-
+export default Transactions

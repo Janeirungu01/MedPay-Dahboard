@@ -5,25 +5,40 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const data = [
 	{
-		name: 'Week1',
+		name: '01Feb',
 		Expense: 3000,
 		Income: 7500
 	},
 	{
-		name: 'week2',
+		name: '02Feb',
 		Expense: 6500,
 		Income: 8000
 	},
 	{
-		name: 'week3',
+		name: '03Feb',
 		Expense: 9800,
 		Income: 5800
 	},
 	{
-		name: 'week4',
+		name: '04Feb',
 		Expense: 5280,
 		Income: 3000
-	}
+	},
+	{
+		name: '05Feb',
+		Expense: 6500,
+		Income: 8000
+	},
+	{
+		name: '06Feb',
+		Expense: 4800,
+		Income: 5800
+	},
+	{
+		name: '07Feb',
+		Expense: 5280,
+		Income: 3000
+	},
 ]
 
 function Charts() {
@@ -32,7 +47,7 @@ function Charts() {
     <div className="h-[24rem] bg-white p-4 rounded-sm border gap-y-px border-gray-200 flex flex-column flex-1">
 	<div className="mt-3 w-full flex-1 text-xs">
 		<div className='flex flex-row justify-between items-center'>
-			<p className="font-bold text-sm">Income this week #500000</p>
+			<p className="font-bold text-xl">Transaction Chart</p>
 			<button className='border rounded border-gray-200 p-2 text-sm flex flex-row items-center'>Last week <RiArrowDropDownLine /></button>
 		</div>
 			
