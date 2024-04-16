@@ -4,7 +4,7 @@ import Charts from './Charts';
 function Dashboard() {
   return (
     <>
-      <div className='flex flex-row gap-4 w-full'></div>
+      <div className='flex flex-row justify-between w-full'></div>
       <Charts />
       <br />
      < RecentOrders />

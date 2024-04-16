@@ -19,7 +19,13 @@ const Transactions = () => {
 
     const lastPostIndex = currentPage * postsPerpage;
     const firstPostIndex = lastPostIndex - postsPerpage;
-    const currentposts = transactionData.slice(firstPostIndex,lastPostIndex)
+    const currentposts = transactionData.slice(firstPostIndex,lastPostIndex);
+    //
+    // const npage = Math.ceil(currentposts/postsPerpage);
+    // let pages = [];
+    // for (let i=1; i<= Math.ceil(currentposts/postsPerpage);i++) {
+    //     pages.push(i)
+    // }
 
 
   return (
@@ -66,11 +72,17 @@ const Transactions = () => {
             postsPerpage={postsPerpage}
             setCurrentPage={setCurrentPage}
             />
+          
+
         </div>
 
         
     </>
     
   )
+
+
+
+  
 }
 export default Transactions
