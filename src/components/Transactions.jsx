@@ -1,136 +1,7 @@
-import { AiOutlineFilter } from "react-icons/ai";
-import { RiArrowDropDownLine } from "react-icons/ri";
-
-const transactionData = [
-    {
-        transactionId: 'PH56743',
-        description: 'Sales',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Pharmacy',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'New Stocks',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Ob-Gyn',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'Sales',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Pharmacy',
-        amount : 'N20,000'      
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'Sales',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Pharmacy',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'New Stocks',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Ob-Gyn',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'Sales',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Pharmacy',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'New Stocks',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Ob-Gyn',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'New Items',
-        date: 'Today, 12:00PM',
-        status: 'Pending',
-        category: 'Pharmacy',
-        amount : '-N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'New Items',
-        date: 'Today, 12:00PM',
-        status: 'Pending',
-        category: 'Laboratory',
-        amount : '-N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'Malaria tests',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Laboratory',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'New Items',
-        date: 'Today, 12:00PM',
-        status: 'Pending',
-        category: 'Laboratory',
-        amount : '-N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'Malaria tests',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Laboratory',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'Sales',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Pharmacy',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'New Stocks',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Ob-Gyn',
-        amount : 'N20,000'  
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'Sales',
-        date: 'Today, 12:00PM',
-        status: 'Completed',
-        category: 'Pharmacy',
-        amount : 'N20,000'      
-    },
-    {
-        transactionId: 'PH56743',
-        description: 'New Items',
-        date: 'Today, 12:00PM',
-        status: 'Pending',
-        category: 'Pharmacy',
-        amount : '-N20,000'  
-    },
-];
+import { useState } from "react";
+import { FaFilter  } from "react-icons/fa";
+import Pagination from "./Pagination";
+import transactionData from "./data/transactionData";
 
 const Transactions = () => {
     const textColor = transactionData.map(each => {
@@ -143,17 +14,24 @@ const Transactions = () => {
         }
     });
 
+    const [currentPage, setCurrentPage] =useState (1);
+    const [postsPerpage, setPostsPerpage] = useState (14)
+
+    const lastPostIndex = currentPage * postsPerpage;
+    const firstPostIndex = lastPostIndex - postsPerpage;
+    const currentposts = transactionData.slice(firstPostIndex,lastPostIndex)
+
 
   return (
     <>
         <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
-			<div className="flex justify-between py-3 px-2.5 text-sm text-left border-y bg-neutral-100">
+			<div className="flex justify-between py-3 px-2.5 text-sm text-left bg-white">
                 <div className=" flex justify-start space-x-4  text-center" >
-                <strong className="text-gray-700 font-bold mt-1">Recent Transactions</strong>
-                <button className='border rounded border-gray-200 p-0 text-sm flex flex-row items-center bg-neutral-50'>Today <RiArrowDropDownLine /></button>
-                <button className='border rounded border-gray-200 p-0 text-sm flex flex-row items-center bg-neutral-50'>March 2024<RiArrowDropDownLine /></button>              
+                <p className="text-gray-700 underline-offset-4 underline-custom font-bold">March,2024</p>             
+                <p className='p-0 text-sm text-center'>Income</p>              
+                <p className='p-0 text-sm text-center'>Expense</p>              
                 </div>
-		    <button className='border rounded border-gray-200 px-2 text-sm flex flex-row items-center bg-neutral-50'><AiOutlineFilter /> Filter</button> 
+		    <button className='border rounded-2xl border-gray-200 px-2 text-sm flex flex-row items-center gap-1 bg-neutral-50'><FaFilter /> Filter</button> 
          </div> 
             <div className="mt-3">
                 <table className="w-full text-gray-700">
@@ -167,7 +45,7 @@ const Transactions = () => {
                         </tr>
                     </thead>
                     <tbody>
-					{transactionData.map((pay, index) => (
+					{currentposts.map((pay, index) => (
                             <tr key={index}>
                                 <td>{pay.date}</td>
                                 <td>{pay.transactionId}</td>
@@ -180,7 +58,17 @@ const Transactions = () => {
                 </table>
             </div>
             
-    </div>
+        </div>
+
+        <div>
+            <Pagination 
+            totalposts={transactionData.length}
+            postsPerpage={postsPerpage}
+            setCurrentPage={setCurrentPage}
+            />
+        </div>
+
+        
     </>
     
   )

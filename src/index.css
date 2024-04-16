@@ -78,6 +78,55 @@ body {
 
   /* sidebar */
 
+  /* pagination */
+
+  
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.pagination button {
+    width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: black;
+    border-color: black;
+}
+
+.pagination li {
+	list-style: none;
+	align-items: center;
+	text-align: center;
+}
+
+.pagination a {
+	align-items: center;
+	text-align: center;
+}
+.pagination button.active {
+    font-weight: 900;
+    border-color: #101010;
+    background: #ffe400;
+    color: #101010;
+}
+
+  /* transactions */
+  .underline-custom {
+	border-bottom: 2px solid #4299e1; 
+  	padding-bottom: 2px
+
+  }
+
 @layer base {
 	html {
 		font-family: 'Inter', sans-serif;
