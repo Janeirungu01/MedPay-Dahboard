@@ -3,9 +3,8 @@ import Dashboard from "./components/Dashboard"
 import Layout1 from "./components/shared/Layout1";
 import Analytics from "./components/Analytics";
 import Transactions from "./components/Transactions";
-import Charts from "./components/Charts";
+import Charts from "./helpers/Charts";
 import Help from "./components/Help";
-import Products from "./components/Products";
 
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         <Route path= '/transactions' element={<Transactions />} />
         <Route path= '/charts' element={<Charts />} />
         <Route path= '/support' element={<Help />} />
-        <Route path= '/products' element={<Products />} />
         
       
         

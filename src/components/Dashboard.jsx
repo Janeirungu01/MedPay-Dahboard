@@ -1,5 +1,5 @@
-import RecentOrders from './RecentOrders';
-import Charts from './Charts';
+import RecentOrders from '../helpers/RecentOrders';
+import Charts from '../helpers/Charts';
 
 function Dashboard() {
   return (

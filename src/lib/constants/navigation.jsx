@@ -1,10 +1,9 @@
 import {
 	HiOutlineViewGrid,
-	HiOutlineCube,
-	HiOutlineShoppingCart,
 	HiOutlineUsers,
-	HiOutlineDocumentText,
-	HiOutlineAnnotation,
+    HiOutlineChartBar,
+    HiSwitchHorizontal,
+	HiOutlineUser,
 	HiOutlineQuestionMarkCircle,
 	HiOutlineCog
 } from 'react-icons/hi'
@@ -20,25 +19,19 @@ export const sidebarTopLinks = [
 		key: 'transactions',
 		label: 'Transactions',
 		path: '/transactions',
-		icon: <HiOutlineDocumentText />
+		icon: <HiSwitchHorizontal />
 	},
     {
 		key: 'analytics',
 		label: 'Analytics',
 		path: '/analytics',
-		icon: <HiOutlineShoppingCart />
+		icon: <HiOutlineChartBar />
 	},
 	{
-		key: 'products',
-		label: 'Products',
-		path: '/products',
-		icon: <HiOutlineCube />
-	},
-    {
 		key: 'profile',
 		label: 'Profile',
 		path: '/profile',
-		icon: <HiOutlineAnnotation />
+		icon: <HiOutlineUser />
 	},
 	{
 		key: 'staff',

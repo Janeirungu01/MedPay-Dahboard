@@ -8,6 +8,7 @@ const paymentData = [
         date: 'Today, 12:00PM',
         status: 'Completed',
         category: 'Pharmacy',
+        icon : < AiOutlineFilter/>,        
         amount : 'N20,000'  
     },
     {

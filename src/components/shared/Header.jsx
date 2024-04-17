@@ -1,8 +1,6 @@
-import 
- {BsFillBellFill,  BsPersonCircle, BsSearch, BsJustify}
- from 'react-icons/bs';
- import logoImage from '../../assets/medpaylogo.png';
- import dpImage from '../../assets/userdp.jpeg';
+import { HiOutlineBell, HiOutlineSearch } from "react-icons/hi";
+import logoImage from '../../assets/medpaylogo.png';
+import dpImage from '../../assets/userdp.jpeg';
 
 function Header() {
   return (
@@ -17,7 +15,7 @@ function Header() {
         </div>
         <div style={{ display: "flex", alignItems: "center", columnGap: "1rem" }}>
         <div>
-          <BsFillBellFill className='text-teal-500 border rounded-full p-0.5 bg-white w-7 h-7' />
+          <HiOutlineBell className='text-teal-500 border rounded-full p-0.5 bg-white w-7 h-7' />
         </div>
         <div
           style={{
@@ -34,11 +32,6 @@ function Header() {
           <img src={dpImage} alt="dpImage" />
         </div>
       </div>
-
-        {/* <div className='header-right'>
-            <BsFillBellFill className='icon'/>
-            <img src={dpImage} alt="profile-picture"  className='pp-img'/>
-        </div> */}
     </header>
     </>
 

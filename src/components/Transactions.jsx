@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { FaFilter  } from "react-icons/fa";
-import Pagination from "./Pagination";
-import transactionData from "./data/transactionData";
+import { HiOutlineAdjustments } from "react-icons/hi";
+import Pagination from "../helpers/Pagination";
+import transactionData from "../lib/constants/transactionData";
 
 const Transactions = () => {
     const textColor = transactionData.map(each => {
@@ -20,12 +20,6 @@ const Transactions = () => {
     const lastPostIndex = currentPage * postsPerpage;
     const firstPostIndex = lastPostIndex - postsPerpage;
     const currentposts = transactionData.slice(firstPostIndex,lastPostIndex);
-    //
-    // const npage = Math.ceil(currentposts/postsPerpage);
-    // let pages = [];
-    // for (let i=1; i<= Math.ceil(currentposts/postsPerpage);i++) {
-    //     pages.push(i)
-    // }
 
 
   return (
@@ -37,7 +31,7 @@ const Transactions = () => {
                 <p className='p-0 text-sm text-center'>Income</p>              
                 <p className='p-0 text-sm text-center'>Expense</p>              
                 </div>
-		    <button className='border rounded-2xl border-gray-200 px-2 text-sm flex flex-row items-center gap-1 bg-neutral-50'><FaFilter /> Filter</button> 
+		    <button className='border rounded-2xl border-gray-200 px-2 text- flex flex-row items-center gap-1 bg-neutral-50'><HiOutlineAdjustments /> Filter</button> 
          </div> 
             <div className="mt-3">
                 <table className="w-full text-gray-700">

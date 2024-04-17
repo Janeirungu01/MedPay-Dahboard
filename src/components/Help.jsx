@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FAQ from "./FAQ";
+import FAQ from "../helpers/FAQ";
 
 function Help() {    
 
