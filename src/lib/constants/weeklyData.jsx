@@ -35,5 +35,4 @@ const weeklyData = [
 		Income: 3000
 	}
 ]
-
 export default weeklyData

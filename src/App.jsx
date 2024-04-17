@@ -5,6 +5,7 @@ import Analytics from "./components/Analytics";
 import Transactions from "./components/Transactions";
 import Charts from "./helpers/Charts";
 import Help from "./components/Help";
+import Settings from "./components/Settings";
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Route path= '/analytics' element={<Analytics />} />
         <Route path= '/transactions' element={<Transactions />} />
         <Route path= '/charts' element={<Charts />} />
+        <Route path= '/support' element={<Help />} />
+        <Route path= '/settings' element={<Settings />} />
         <Route path= '/support' element={<Help />} />
         
       

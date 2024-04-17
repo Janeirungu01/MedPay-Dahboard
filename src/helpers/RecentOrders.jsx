@@ -1,4 +1,4 @@
-import { AiOutlineFilter } from "react-icons/ai";
+import { HiOutlineAdjustments } from "react-icons/hi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const paymentData = [
@@ -8,7 +8,7 @@ const paymentData = [
         date: 'Today, 12:00PM',
         status: 'Completed',
         category: 'Pharmacy',
-        icon : < AiOutlineFilter/>,        
+        icon : < HiOutlineAdjustments/>,        
         amount : 'N20,000'  
     },
     {
@@ -90,7 +90,7 @@ const RecentOrders = () => {
                 <button className='border rounded border-gray-200 p-0 text-sm flex flex-row items-center bg-neutral-50'>Today <RiArrowDropDownLine /></button>
                 <button className='border rounded border-gray-200 p-0 text-sm flex flex-row items-center bg-neutral-50'>March 2024<RiArrowDropDownLine /></button>              
                 </div>
-		 <button className='border rounded border-gray-200 px-2 text-sm flex flex-row items-center bg-neutral-50'><AiOutlineFilter /> Filter</button> </div> 
+		 <button className='border rounded border-gray-200 px-2 text-sm flex flex-row items-center bg-neutral-50'><HiOutlineAdjustments /> Filter</button> </div> 
             <div className="mt-3">
                 <table className="w-full text-gray-700">
                     <thead>
@@ -120,6 +120,7 @@ const RecentOrders = () => {
             
     </div>
     </>
+
     
   )
 }

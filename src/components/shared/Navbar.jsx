@@ -6,7 +6,6 @@ import { HiOutlineLogout } from 'react-icons/hi';
 const linkClass =
 	'flex items-center gap-2 font-light px-3 py-2 hover:bg-white hover:no-underline rounded-sm text-base'
 
-
 function Navbar() {
   return (
     <>
@@ -25,7 +24,7 @@ function Navbar() {
             ))}
         </div>
         
-        <div className={classNames(linkClass, 'text-red-500')}>
+        <div className={classNames(linkClass, ' cursor-pointer text-red-500')}>
 					<span className="text-xl">
 						<HiOutlineLogout />
 					</span>

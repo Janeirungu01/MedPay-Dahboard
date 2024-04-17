@@ -11,7 +11,7 @@ function Header() {
         </div>
         <div className='search-icon'>
             <input type="text" placeholder='Search' />
-            {/* <BsSearch className='icon'/> */}
+            {/* <HiOutlineSearch fontSize={25} className=""/> */}
         </div>
         <div style={{ display: "flex", alignItems: "center", columnGap: "1rem" }}>
         <div>
