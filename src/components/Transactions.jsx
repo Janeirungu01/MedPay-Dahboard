@@ -65,18 +65,12 @@ const Transactions = () => {
             totalposts={transactionData.length}
             postsPerpage={postsPerpage}
             setCurrentPage={setCurrentPage}
-            />
-          
-
+            />   
         </div>
 
         
     </>
     
-  )
-
-
-
-  
+  )  
 }
 export default Transactions

@@ -1,6 +1,6 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts'
-import { RiArrowDropDownLine } from "react-icons/ri";
-import weeklyData from '../lib/constants/weeklyData';
+import { XAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts'
+import { RiArrowDropDownLine, RiArrowUpLine } from "react-icons/ri";
+import daysData from '../lib/constants/daysData';
 
 
 function Charts() {
@@ -14,7 +14,7 @@ function Charts() {
  				<p>Account Balance</p>				
 				<h3 className='font-bold text-white'>NGN 1200000</h3>
 				</div>	
-				<div className='mb-0'><button className='bg-white rounded-xl text-teal-800 p-3'>12%</button></div>				
+				<div className='mb-0'><button className='bg-white rounded-xl text-teal-800 p-3 flex'>12%< RiArrowUpLine/></button></div>				
 			</div>
  			</div >
 			 <div className='bg-red-700 justify-start text-white p-7 align-center mt-3'>
@@ -23,7 +23,7 @@ function Charts() {
  				<p>Total Income</p>				
 				<h3 className='font-bold text-white'>NGN 1200000</h3>
 				</div>	
-				<div className='mb-0'><button className='bg-white rounded-xl text-teal-800 p-3'>12%</button></div>				
+				<div className='mb-0'><button className='bg-white rounded-xl text-teal-800 p-3 flex'>12% < RiArrowUpLine/></button></div>				
 				</div>
  			</div >
 			 <div className='bg-teal-800 justify-start text-white p-7 align-center mt-3'>
@@ -32,7 +32,7 @@ function Charts() {
  				<p>Total Expense</p>				
 				<h3 className='font-bold text-white'>NGN 314555</h3>
 				</div>	
-				<div className='mb-0'><button className='bg-white rounded-xl text-teal-800 p-3'>7%</button></div>				
+				<div className='mb-0'><button className='bg-white rounded-xl text-teal-800 p-3 flex'>7% < RiArrowUpLine/></button></div>				
 				</div>
  			</div >
  		</div>
@@ -45,7 +45,7 @@ function Charts() {
 		<ResponsiveContainer width="100%" height="90%">
             <LineChart width={500}
 						height={300}
-						data={weeklyData}
+						data={daysData}
 						margin={{
 							top: 20,
 							right: 10,
@@ -63,40 +63,6 @@ function Charts() {
         </ResponsiveContainer>
 
 	</div>
-
-		
-
-				{/* <div className="mt-3 flex-1 text-xs h-screen w-screen">
-	<p className="text-gray-700 font-medium">Top Categories</p>
-			
-            <h3 className="heading">Showing data for top income</h3>
-			<br />
-			<p className="text-center justify-center">Pharmacy  52%</p>
-            <Progressbar 
-                bgcolor="#065f46"
-                progress="52"
-                height={15}
-            />
-			<p className="text-center justify-center">Ob-Gyn  27%</p>
-            <Progressbar
-                bgcolor="#065f46"
-                progress="27"
-                height={15}
-            />
-			<p className="text-center justify-center">Laboratory   82%</p>
-            <Progressbar
-                bgcolor="#065f46"
-                progress="82" 
-                height={15}
-            />
-			<p className="text-center justify-center">Emergency Fund   29%</p>
-            <Progressbar
-                bgcolor="#065f46"
-                progress="29"
-                height={15}
-            />       
-					</div> */}
-
 						
                         
     </div>

@@ -6,10 +6,11 @@ import { HiOutlineLogout } from 'react-icons/hi';
 const linkClass =
 	'flex items-center gap-2 font-light px-3 py-2 hover:bg-white hover:no-underline rounded-sm text-base'
 
+
 function Navbar() {
   return (
     <>
-    <div className='bg-white w-60 p-3 flex flex-col h-max text-black'>
+    <div className='bg-white w-60 p-3 flex flex-col h-5/6 text-black'>
     
         <div className='flex-1 py-8 flex flex-col gap-1'>
             {sidebarTopLinks.map ((item) => (
@@ -43,7 +44,7 @@ function Navbar() {
     return (
         <>
                 
-    <Link to={item.path} className={classNames (pathname=== item.path ? 'text-red' : 'text-black',linkClass)}> 
+    <Link to={item.path} className={classNames (pathname=== item.path ? 'text-blue' : 'text-black',linkClass)}> 
     <span className='text-xl'>{item.icon}</span>
     {item.label}
     </Link>

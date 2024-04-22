@@ -1,4 +1,4 @@
-const weeklyData = [
+const daysData = [
     {
 		name: '01Feb',
 		Expense: 3000,
@@ -35,4 +35,4 @@ const weeklyData = [
 		Income: 3000
 	}
 ]
-export default weeklyData
+export default daysData
