@@ -32,7 +32,7 @@ function Charts() {
  				<p>Total Expense</p>				
 				<h3 className='font-bold text-white'>NGN 314555</h3>
 				</div>	
-				<div className='mb-0'><button className='bg-white rounded-xl text-teal-800 p-3 flex'>7% < RiArrowUpLine/></button></div>				
+				<div className='mb-0'><button className='bg-white rounded-xl text-teal-800 p-3 flex'>07% < RiArrowUpLine/></button></div>				
 				</div>
  			</div >
  		</div>

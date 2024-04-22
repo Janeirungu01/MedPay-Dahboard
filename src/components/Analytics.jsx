@@ -1,5 +1,5 @@
 
-import { BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts'
+import { BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie } from 'recharts'
 import { RiArrowDropDownLine, RiArrowDropRightLine, RiArrowUpLine  } from 'react-icons/ri';
 import { daysData,weeklyData } from '../lib/constants/chartsData';
 import Progressbar from '../helpers/Progressbar';
@@ -8,9 +8,21 @@ import Progressbar from '../helpers/Progressbar';
 function Analytics() {
   return (
     <>
+    <div className='flex flex-col mb-7'>
         <div className="h-[24rem] bg-white p-3 rounded-sm gap-6 flex flex-row">
         <div className="mt-0.5 w-full flex-1 text-xs border border-gray-200 p-6 shadow-md">
-            <strong className="text-gray-700 font-medium">March 2024</strong>
+            <div className='flex flex-row justify-between'>
+                <div>
+                <p className="font-bold text-base">Income over Expense</p>
+                </div>
+                <div>
+                <p className="text-base flex flex-row">March 2024< RiArrowDropDownLine/></p>
+                </div>
+                <div>
+                <p className='text-base flex flex-row items-center text-teal-700'>12% <RiArrowUpLine /></p>
+                </div>
+            </div>
+            
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart width={500}
                                 height={300}
@@ -36,10 +48,10 @@ function Analytics() {
                 <div className='flex flex-row justify-between items-center'>
                     <div>
                     <p className="font-bold text-xl">NGN 500000</p>
-                    <p className='font-xl'>Income this week</p>
+                    <h3 className=''>Income this week</h3>
                     </div>
                     <div>
-                    <button className='border rounded border-gray-200 p-2 text-sm flex flex-row items-center text-teal-600'>12% <RiArrowUpLine /></button>
+                    <button className='border rounded border-gray-200 p-2 text-sm flex flex-row items-center text-teal-700'>12% <RiArrowUpLine /></button>
                     </div>
                     
                 </div>
@@ -49,13 +61,13 @@ function Analytics() {
                     margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
                     <defs>
                         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#38bdf8" stopOpacity={0.8}/>
+                        <stop offset="5%" stopColor="#1A56DB" stopOpacity={0.5}/>
                         <stop offset="95%" stopColor="#7dd3fc" stopOpacity={0}/>
                         </linearGradient>
                     </defs>
                     
                     <Tooltip />
-                    <Area type="monotone" dataKey="Income" stroke="#8884d8" strokeWidth={5} fillOpacity={1} fill="url(#colorUv)" />
+                    <Area type="monotone" dataKey="Income" stroke="#1A56DB" strokeWidth={5} fillOpacity={1} fill="url(#colorUv)" />
                 </AreaChart>
                 </ResponsiveContainer>
                 <div className='flex flex-row justify-between items-center mt-2' >                    
@@ -96,6 +108,44 @@ function Analytics() {
                         />       
 				</div> 						
                         
+    </div>
+
+        <div className='h-[24rem] flex flex-row justify-between ml-3'>
+            <div className='w-1/3 h-[27rem] border border-gray-200'>
+                <ResponsiveContainer width="80%" height="100%">    
+                    <PieChart width={500} height={250}>
+                    <Pie data={weeklyData} dataKey="Expense" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
+                
+                    </PieChart>
+                </ResponsiveContainer>
+        </div>
+
+                <div className='w-2/3 ml-5 my-10 mr-2 p-3 '>
+                    <ResponsiveContainer width="100%" height="100%">
+                        <ul className='flex flex-row list-none justify-end mr-5 gap-3 p-1'>
+                            <li className='bg-blue-400'>Yearly</li>
+                            <li>Monthly</li>
+                            <li>Weekly</li>
+                        </ul>
+                        <AreaChart
+                            width={730}
+                            height={250}
+                            data={daysData}
+                            margin={{
+                                top: 20, right: 20, bottom: 20, left: 20,
+                            }}
+                            >
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <CartesianGrid strokeDasharray="3 0" />
+                            <Area dataKey="Income" stroke="#DCE5F9" fill="#1A56DB" />
+                            <Tooltip />
+                        </AreaChart>
+                        </ResponsiveContainer>
+                </div>
+   
+    </div>
+
     </div>
 
             

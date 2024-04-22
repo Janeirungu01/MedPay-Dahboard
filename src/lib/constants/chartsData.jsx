@@ -18,7 +18,7 @@ export const daysData =[
 	{
 		name: '04Feb',
 		Expense: 5280,
-		Income: 3000
+		Income: 3800
 	},
 	{
 		name: '05Feb',
