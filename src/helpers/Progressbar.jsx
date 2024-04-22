@@ -2,19 +2,18 @@
     
     const Parentdiv = {
         height: height,
-        width: '30%',
+        width: '50%',
         backgroundColor: 'whitesmoke',
         borderRadius: 40,
-        margin: 20
+        margin: 10
       }
      
       const Childdiv = {
         height: '100%',
-
         width: `${progress}%`,
         backgroundColor: bgcolor,
        borderRadius:40,
-        textAlign: 'right'
+        
       }
      
       const progresstext = {

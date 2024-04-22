@@ -1,4 +1,12 @@
-
+export const categoriesData =[
+	{
+		Category:'total income',
+		Pharmacy: 500000,
+		Laboratory: 250000,
+		ObGyn: 300000,
+		Triage: 100000,
+	},
+]
 export const daysData =[
 	{
 		name: '01Feb',

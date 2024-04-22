@@ -1,16 +1,24 @@
 
 import { BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie } from 'recharts'
 import { RiArrowDropDownLine, RiArrowDropRightLine, RiArrowUpLine  } from 'react-icons/ri';
-import { daysData,weeklyData } from '../lib/constants/chartsData';
+import { daysData, weeklyData, categoriesData } from '../lib/constants/chartsData';
+import { Chart } from "react-google-charts";
 import Progressbar from '../helpers/Progressbar';
 
+export const data = [
+    ['Category', 'total income'],
+          ['Pharmacy', 500000],
+          ['Laboratory', 250000],
+          ['ObGyn',300000],
+          ['Triage', 100000],
+  ];
 
 function Analytics() {
   return (
     <>
     <div className='flex flex-col mb-7'>
-        <div className="h-[24rem] bg-white p-3 rounded-sm gap-6 flex flex-row">
-        <div className="mt-0.5 w-full flex-1 text-xs border border-gray-200 p-6 shadow-md">
+        <div className="h-[24rem] bg-white p-3 w-screen rounded-sm gap-6 flex flex-row">
+        <div className="my-0.5 w-1/2 flex-1 text-xs border border-gray-200 p-6 shadow-md">
             <div className='flex flex-row justify-between'>
                 <div>
                 <p className="font-bold text-base">Income over Expense</p>
@@ -44,7 +52,7 @@ function Analytics() {
             </ResponsiveContainer>
     </div>
 
-	        <div className="mt-1 w-full flex-1 text-xs p-7 border border-gray-200 shadow-md">
+	        <div className="mt-1 w-1/4 flex-1 text-xs p-7 border border-gray-200 shadow-md">
                 <div className='flex flex-row justify-between items-center'>
                     <div>
                     <p className="font-bold text-xl">NGN 500000</p>
@@ -69,54 +77,77 @@ function Analytics() {
                     <Tooltip />
                     <Area type="monotone" dataKey="Income" stroke="#1A56DB" strokeWidth={5} fillOpacity={1} fill="url(#colorUv)" />
                 </AreaChart>
-                </ResponsiveContainer>
                 <div className='flex flex-row justify-between items-center mt-2' >                    
                     <p className='p-2 text-sm flex flex-row items-center'>Last 7 days <RiArrowDropDownLine /></p>
                     <p className="font-light text-base text-blue-600 flex flex-row items-center">USERS REPORT <RiArrowDropRightLine /></p>
                 </div>
+                </ResponsiveContainer>
+               
 	</div>
     
 
                           {/* progress bar */}
-				<div className="mt-1 flex-1 text-xs w-1/2 p-7 border border-gray-200 shadow-md">
-                    <p className="text-gray-700 font-medium">Top Categories</p>			
+				<div className="my-1 flex-1 text-xs w-1/4 p-7 border border-gray-200 shadow-md mr-7">
+                    <p className="font-bold text-base">Top Categories</p>			
                         <h3 className="heading">Showing data for top income</h3>
                         <br />
-                        <p className="text-center justify-center">Pharmacy  52%</p>
+                        <p className="ml-4 text-center text-sm flex justify-start gap-28">
+                            <p>Pharmacy</p>  
+                            <p>52%</p></p>
                         <Progressbar 
-                            bgcolor="#065f46"
+                            bgcolor="#ea580c"
                             progress="52"
                             height={15}
                         />
-                        <p className="text-center justify-center">Ob-Gyn  27%</p>
+                            <p className="m-4 text-center text-sm flex justify-start gap-28">
+                            <p>Ob-Gyn</p>  
+                             <p>27%</p></p>
                         <Progressbar
-                            bgcolor="#065f46"
+                            bgcolor="#ea580c"
                             progress="27"
                             height={15}
                         />
-                        <p className="text-center justify-center">Laboratory   82%</p>
+                        <p className="m-4 text-center text-sm flex justify-start gap-28">
+                            <p>Laboratory</p>  
+                             <p>82%</p></p>
                         <Progressbar
-                            bgcolor="#065f46"
+                            bgcolor="#ea580c"
                             progress="82" 
                             height={15}
                         />
-                        <p className="text-center justify-center">Emergency Fund   29%</p>
+                            <p className="m-4 text-center text-sm flex justify-start gap-28">
+                            <p>Emergency Fund</p>  
+                            <p>29%</p></p>
                         <Progressbar
-                            bgcolor="#065f46"
+                            bgcolor="#ea580c"
                             progress="29"
                             height={15}
                         />       
 				</div> 						
                         
     </div>
-
+                                {/* Bottom part */}
         <div className='h-[24rem] flex flex-row justify-between ml-3'>
-            <div className='w-1/3 h-[27rem] border border-gray-200'>
-                <ResponsiveContainer width="80%" height="100%">    
+            <div className='w-1/3 h-[27rem] border border-gray-200 shadow-md'>
+                <ResponsiveContainer width="80%" height="100%">
+                <p className="font-bold text-base p-4">Top Categories</p>			
+                        <h3 className="heading pl-4">Showing data for top income</h3>
+                        <br />
+                {/* <Chart
+                    chartType="PieChart"
+                    data={data}
+                    width={"80%"}
+                    height={"80%"}
+                    />  */}
+                 
                     <PieChart width={500} height={250}>
-                    <Pie data={weeklyData} dataKey="Expense" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
+                    <Pie data={categoriesData} dataKey="Amount" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
                 
                     </PieChart>
+                    <div className='flex flex-row justify-between items-center mt-2' >                    
+                    <p className='p-2 text-sm flex flex-row items-center'>Last 7 days <RiArrowDropDownLine /></p>
+                    <p className="font-light text-base text-blue-600 flex flex-row items-center">USERS REPORT <RiArrowDropRightLine /></p>
+                </div> 
                 </ResponsiveContainer>
         </div>
 
@@ -144,7 +175,7 @@ function Analytics() {
                         </ResponsiveContainer>
                 </div>
    
-    </div>
+        </div>
 
     </div>
 

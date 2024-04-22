@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Dashboard from "./components/Dashboard"
+import Dashboard from "./components/Dashboard";
 import Layout1 from "./components/shared/Layout1";
 import Analytics from "./components/Analytics";
-import Transactions from "./components/Transactions";
+import Transactions from "./components/Transactions"
 import Charts from "./helpers/Charts";
 import Help from "./components/Help";
 import Settings from "./components/Settings";
+import Profile from "./components/Profile";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path= '/support' element={<Help />} />
         <Route path= '/settings' element={<Settings />} />
         <Route path= '/support' element={<Help />} />
+        <Route path= '/profile' element={<Profile />} />
         
       
         
