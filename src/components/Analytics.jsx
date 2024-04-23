@@ -1,7 +1,7 @@
 
 import { BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie } from 'recharts'
 import { RiArrowDropDownLine, RiArrowDropRightLine, RiArrowUpLine  } from 'react-icons/ri';
-import { daysData, weeklyData, categoriesData } from '../lib/constants/chartsData';
+import { daysData, weeklyData, yearlyData, categoriesData } from '../lib/constants/chartsData';
 import { Chart } from "react-google-charts";
 import Progressbar from '../helpers/Progressbar';
 
@@ -10,13 +10,12 @@ export const data = [
           ['Pharmacy', 500000],
           ['Laboratory', 250000],
           ['ObGyn',300000],
-          ['Triage', 100000],
   ];
 
 function Analytics() {
   return (
     <>
-    <div className='flex flex-col mb-7'>
+    <div className='flex flex-col mb-7 overflow-hidden overflow-x-hidden'>
         <div className="h-[24rem] bg-white p-3 w-screen rounded-sm gap-6 flex flex-row">
         <div className="my-0.5 w-1/2 flex-1 text-xs border border-gray-200 p-6 shadow-md">
             <div className='flex flex-row justify-between'>
@@ -87,7 +86,7 @@ function Analytics() {
     
 
                           {/* progress bar */}
-				<div className="my-1 flex-1 text-xs w-1/4 p-7 border border-gray-200 shadow-md mr-7">
+				<div className="my-1 flex-1 text-xs w-1/4 p-7 border border-gray-200 shadow-md mr-8">
                     <p className="font-bold text-base">Top Categories</p>			
                         <h3 className="heading">Showing data for top income</h3>
                         <br />
@@ -127,26 +126,26 @@ function Analytics() {
                         
     </div>
                                 {/* Bottom part */}
-        <div className='h-[24rem] flex flex-row justify-between ml-3'>
-            <div className='w-1/3 h-[27rem] border border-gray-200 shadow-md'>
+        <div className='h-[27rem] flex flex-row justify-between ml-3'>
+            <div className='w-1/3 h-[24rem] border border-gray-200 shadow-md'>
                 <ResponsiveContainer width="80%" height="100%">
                 <p className="font-bold text-base p-4">Top Categories</p>			
                         <h3 className="heading pl-4">Showing data for top income</h3>
                         <br />
-                {/* <Chart
+                <Chart
                     chartType="PieChart"
                     data={data}
                     width={"80%"}
-                    height={"80%"}
-                    />  */}
+                    height={"50%"}
+                    /> 
                  
-                    <PieChart width={500} height={250}>
+                    {/* <PieChart width={500} height={250}>
                     <Pie data={categoriesData} dataKey="Amount" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
                 
-                    </PieChart>
+                    </PieChart> */}
                     <div className='flex flex-row justify-between items-center mt-2' >                    
-                    <p className='p-2 text-sm flex flex-row items-center'>Last 7 days <RiArrowDropDownLine /></p>
-                    <p className="font-light text-base text-blue-600 flex flex-row items-center">USERS REPORT <RiArrowDropRightLine /></p>
+                    <p className='p-2 text-sm flex flex-row items-center'>1March- 31March <RiArrowDropDownLine /></p>
+                    <p className="font-light text-base text-blue-600 flex flex-row items-center">INCOME ANALYTICS <RiArrowDropRightLine /></p>
                 </div> 
                 </ResponsiveContainer>
         </div>
@@ -161,7 +160,7 @@ function Analytics() {
                         <AreaChart
                             width={730}
                             height={250}
-                            data={daysData}
+                            data={yearlyData}
                             margin={{
                                 top: 20, right: 20, bottom: 20, left: 20,
                             }}
@@ -169,7 +168,7 @@ function Analytics() {
                             <XAxis dataKey="name" />
                             <YAxis />
                             <CartesianGrid strokeDasharray="3 0" />
-                            <Area dataKey="Income" stroke="#DCE5F9" fill="#1A56DB" />
+                            <Area dataKey="Expense" stroke="#DCE5F9" fill="#1A56DB" />
                             <Tooltip />
                         </AreaChart>
                         </ResponsiveContainer>

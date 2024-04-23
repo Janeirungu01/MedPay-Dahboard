@@ -85,3 +85,66 @@ export const monthlyData = [
 	
 	}
 ]
+
+export const yearlyData = [
+	{
+		name: 'Jan',
+		Expense: 7800,
+		Income: 7000,
+	},
+	{
+		name: 'Feb',
+		Expense: 7000,
+		Income: 15000,
+	},
+	{
+		name: 'Mar',
+		Expense: 5500,
+		Income: 7000,
+	},
+	{
+		name: 'April',
+		Expense: 3500,
+		Income: 7000,
+	},
+	{
+		name: 'May',
+		Expense: 7900,
+		Income: 7000,
+	},
+	{
+		name: 'Jun',
+		Expense: 2500,
+		Income: 7000,
+	},
+	{
+		name: 'July',
+		Expense: 6500,
+		Income: 7000,
+	},
+	{
+		name: 'Aug',
+		Expense: 7800,
+		Income: 7000,
+	},
+	{
+		name: 'Sept',
+		Expense: 6000,
+		Income: 7000,
+	},
+	{
+		name: 'Oct',
+		Expense: 9000,
+		Income: 7000,
+	},
+	{
+		name: 'Nov',
+		Expense: 6000,
+		Income: 7000,
+	},
+	{
+		name: 'Dec',
+		Expense: 4500,
+		Income: 7000,
+	},
+]

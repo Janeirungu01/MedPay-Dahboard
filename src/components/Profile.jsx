@@ -1,33 +1,43 @@
-import React from "react";
-import { Chart } from "react-google-charts";
-import { categoriesData } from "../lib/constants/chartsData";
+import { profileLinks } from '../lib/constants/profileIcons';
+import { Link, useLocation } from 'react-router-dom';
+import classNames from 'classnames';
 
-export const data = [
-  ['Category', 'total income'],
-		['Pharmacy', 500000],
-		['Laboratory', 250000],
-		['ObGyn',300000],
-		['Triage', 100000],
-];
+const linkClass =
+	'flex items-center gap-2 font-light px-3 py-2 hover:bg-white hover:no-underline rounded-sm text-base'
 
 
-export const options = {
-  title: "My Daily Activities",
-};
-
-export function Profile() {
+function Profile() {
   return (
-    <div  className="flex flex-row">
-      <Chart
-      chartType="PieChart"
-      data={data}
-      options={options}
-      width={"100%"}
-      height={"400px"}
-    />
+    <>
+    <div className='bg-white w-60 p-3 flex flex-col h-5/6 text-black'>
+    
+        <div className='flex-1 py-8 flex flex-col gap-1'>
+            {profileLinks.map ((item) => (
+               <ProfileLink key={item.key} item={item} />
+
+            ))}
+        </div>
+        
     </div>
-   
-  );
+
+    <div className='bg-neutral-600'></div>
+      
+    </>
+  )
 }
+
+  function ProfileLink ({item}) {
+    const { pathname } = useLocation()
+    return (
+        <>
+                
+    <Link to={item.path} className={classNames (pathname=== item.path ? 'text-blue' : 'text-black',linkClass)}> 
+    <span className='text-xl text-teal-300  bg-teal-50 rounded-full p-1'>{item.icon}</span>
+    {item.label}
+    </Link>
+        </>
+    )
+  }
+
 
 export default Profile
