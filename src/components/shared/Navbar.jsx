@@ -10,7 +10,7 @@ const linkClass =
 function Navbar() {
   return (
     <>
-    <div className='bg-white w-60 p-3 flex flex-col h-5/6 text-black'>
+    <div className='bg-white w-60 p-3 flex flex-col h-5/6 text-black'>      
     
         <div className='flex-1 py-8 flex flex-col gap-1'>
             {sidebarTopLinks.map ((item) => (

@@ -11,7 +11,7 @@ function Header() {
         </div>
         <div className='search-icon'>
             <input type="text" placeholder='Search' />
-            {/* <HiOutlineSearch fontSize={25} className=""/> */}
+             <HiOutlineSearch fontSize={25} className="hidden"/> 
         </div>
         <div style={{ display: "flex", alignItems: "center", columnGap: "1rem" }}>
         <div>

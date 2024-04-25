@@ -7,9 +7,8 @@ const paymentData = [
         description: 'Sales',
         date: 'Today, 12:00PM',
         status: 'Completed',
-        category: 'Pharmacy',
-        icon : < HiOutlineAdjustments/>,        
-        amount : 'N20,000'  
+        category: 'Pharmacy',       
+        amount : 'N20,000',
     },
     {
         transactionId: 'PH56743',
@@ -17,7 +16,8 @@ const paymentData = [
         date: 'Today, 12:00PM',
         status: 'Completed',
         category: 'Ob-Gyn',
-        amount : 'N20,000'  
+        amount : 'N20,000',
+          
     },
     {
         transactionId: 'PH56743',
@@ -25,7 +25,7 @@ const paymentData = [
         date: 'Today, 12:00PM',
         status: 'Completed',
         category: 'Pharmacy',
-        amount : 'N20,000'      
+        amount : 'N20,000',      
     },
     {
         transactionId: 'PH56743',
@@ -33,7 +33,7 @@ const paymentData = [
         date: 'Today, 12:00PM',
         status: 'Pending',
         category: 'Pharmacy',
-        amount : '-N20,000'  
+        amount : '-N20,000',
     },
     {
         transactionId: 'PH56743',
@@ -41,7 +41,7 @@ const paymentData = [
         date: 'Today, 12:00PM',
         status: 'Pending',
         category: 'Laboratory',
-        amount : '-N20,000'  
+        amount : '-N20,000', 
     },
     {
         transactionId: 'PH56743',
@@ -49,7 +49,7 @@ const paymentData = [
         date: 'Today, 12:00PM',
         status: 'Completed',
         category: 'Laboratory',
-        amount : 'N20,000'  
+        amount : 'N20,000',
     },
     {
         transactionId: 'PH56743',
@@ -57,7 +57,7 @@ const paymentData = [
         date: 'Today, 12:00PM',
         status: 'Pending',
         category: 'Laboratory',
-        amount : '-N20,000'  
+        amount : '-N20,000',  
     },
     {
         transactionId: 'PH56743',
@@ -65,7 +65,7 @@ const paymentData = [
         date: 'Today, 12:00PM',
         status: 'Completed',
         category: 'Laboratory',
-        amount : 'N20,000'  
+        amount : 'N20,000',
     },
 ];
 
@@ -83,7 +83,7 @@ const RecentOrders = () => {
 
   return (
     <>
-        <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
+        <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1 overflow-hidden">
 			<div className="flex justify-between py-3 px-2.5 text-sm text-left border-y bg-neutral-100">
                 <div className=" flex justify-start space-x-4  text-center" >
                 <strong className="text-gray-700 font-bold mt-1">Recent Transactions</strong>
@@ -120,7 +120,6 @@ const RecentOrders = () => {
             
     </div>
     </>
-
     
   )
 }

@@ -1,3 +1,4 @@
+
 const transactionData = [
     {
         transactionId: 'PH56743',
@@ -5,7 +6,8 @@ const transactionData = [
         date: 'Today, 12:00PM',
         status: 'Completed',
         category: 'Pharmacy',
-        amount : 'N20,000'  
+        amount : 'N20,000',
+        
     },
     {
         transactionId: 'PH56743',

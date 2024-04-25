@@ -8,7 +8,7 @@ function Charts() {
     <>
     <div className="h-[24rem] bg-white p-7 rounded-sm border gap-y-px border-gray-200 flex flex-row justify-center ">
 	<div className='justify-between text-center w-1/3' >
-			<div className='bg-blue-500 justify-start text-white p-7 align-center mt-3'>
+			<div className='bg-blue-500 justify-start text-white p-7 align-center mt-2'>
 			<div className='flex flex-row justify-between'>	
 				<div className='flex flex-col justify-start'>		
  				<p>Account Balance</p>				
@@ -36,7 +36,7 @@ function Charts() {
 				</div>
  			</div >
  		</div>
-	<div className="mt-3 flex-1 text-xs mx-10 w-2/3">
+	<div className="mt-2 flex-1 text-xs mx-10 w-2/3">
 		<div className='flex flex-row justify-between items-center'>
 			<p className="font-bold text-xl">Transaction Chart</p>
 			<button className='border rounded border-gray-200 p-2 text-sm flex flex-row items-center'>Last week <RiArrowDropDownLine /></button>

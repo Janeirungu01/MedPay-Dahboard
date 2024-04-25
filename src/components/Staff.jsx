@@ -3,9 +3,7 @@ import React from 'react'
 function Staff() {
   return (
     <>
-
-    <h2>This is the staff page</h2>
-      
+      <h2>Staff Page</h2>
     </>
   )
 }
