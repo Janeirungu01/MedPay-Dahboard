@@ -6,7 +6,7 @@ import daysData from '../lib/constants/daysData';
 function Charts() {
   return (
     <>
-    <div className="h-[24rem] bg-white p-7 rounded-sm border gap-y-px border-gray-200 flex flex-row justify-center ">
+    <div className="h-[24rem] bg-white p-7 rounded-sm border gap-y-px border-gray-200 flex flex-row justify-center">
 	<div className='justify-between text-center w-1/3' >
 			<div className='bg-blue-500 justify-start text-white p-7 align-center mt-2'>
 			<div className='flex flex-row justify-between'>	
