@@ -1,11 +1,14 @@
-import { HiOutlineBell, HiOutlineSearch } from "react-icons/hi";
+import { HiMenu, HiOutlineBell, HiOutlineSearch } from "react-icons/hi";
 import logoImage from '../../assets/medpaylogo.png';
 import dpImage from '../../assets/userdp.jpeg';
 
-function Header() {
+function Header({OpenSidebar}) {
   return (
     <>
     <header className='header'>
+    <div className='menu-icon'>
+            <HiMenu className='icon' onClick={OpenSidebar}/>
+        </div>
         <div className='img-logo'>
             <img src={logoImage} alt="medpaylogo" />
         </div>
